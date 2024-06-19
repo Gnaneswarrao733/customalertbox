@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom alert box</title>
+    <style>
+        #box {
+           width: 300px;
+           height: 150px;
+           background: rgba(0,0,500,0.7);
+           margin-top: 100px;
+           display: none;
+           box-shadow: 5px 5px 20px black;
+
+        }
+        #text {
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        button{
+            margin-left: 600px;
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: red;
+            color: black;
+        }
+        input[type="button"] {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            margin-top: 20%;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            margin-top: 20%;
+            cursor: pointer;
+            background-color: brown;
+            color: white;
+        }
+        
+    </style>    
+</head>
+<body>
+    <center><h1>custom alert box</h1></center>
+
+    
+
+    <button onclick="display()" id="button">click</button>
+
+    <center><div id="box">
+
+    <div id="text">are you sure delete this file</div>
+
+    <div><input type="button" value="no" onclick="cancel ()"/>
+          <input type="button" value="you" onclick="del(),cancel ()"/></div>
+    </div></center> 
+
+    <script>
+        function display() {
+
+            document.getElementById("box") .style.display = "block";
+        }
+        function cancel () {
+
+            document.getElementById("box") .style.display = "none";
+        }
+        function del() {
+
+            document.getElementById("button") .style.display = "none";
+        }
+        
+    </script>
+    
+</body>
+</html>
